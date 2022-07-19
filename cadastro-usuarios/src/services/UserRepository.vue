@@ -5,7 +5,7 @@ export default class UserRepository {
 
 	constructor() {
 		this.axiosService = axios.create({
-			baseURL: "https://testes.rafaelaranhadev.com/api_teste_selecty.php",
+			baseURL: "http://localhost/api_teste_selecty.php",
 		});
 	}
 
@@ -18,7 +18,7 @@ export default class UserRepository {
     }
 
     async createUser(user){
-    axios.post('https://testes.rafaelaranhadev.com/api_teste_selecty.php', {
+    axios.post('http://localhost/api_teste_selecty.php', {
     jsonData: {
         name:user.name,
         email:user.email,

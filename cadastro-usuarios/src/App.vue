@@ -46,7 +46,7 @@
 			</form>
 		</div>
 		<div v-show="viewType == 1">
-			<form @submit.prevent="submitForm(this.form)"  class="form-data">
+			<form @submit.prevent=""  class="form-data">
 				<label for="professional">
 						Experiência profissional:
 						<input type="text" id="professionalExp" placeholder="experiência profissional" v-model="form.xpProf">
@@ -89,7 +89,7 @@
 								}
 							">ANTERIOR
 					</button>
-					<button>ENVIAR
+					<button v-on:click="submitForm(this.form)">ENVIAR
 					</button>
 			</form>
 		</div>
