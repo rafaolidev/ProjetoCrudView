@@ -18,7 +18,7 @@ export default class UserRepository {
     }
 
     async createUser(user){
-    this.axiosService.post({
+    axios.post('http://testes.rafaelaranhadev.com/api_teste_selecty.php', {
     jsonData: {
         name:user.name,
         email:user.email,

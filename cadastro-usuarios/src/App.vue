@@ -32,7 +32,7 @@
 				</label>
 				<label for="email">
 						E-mail:
-						<input type="email" id="email" placeholder="email" v-model="form.email">
+						<input type="" id="" placeholder="email" v-model="form.email">
 				</label>
 				<label for="phone">
 						Telefone:
