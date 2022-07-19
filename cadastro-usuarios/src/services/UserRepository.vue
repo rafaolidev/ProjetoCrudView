@@ -1,0 +1,43 @@
+<script>
+import axios from 'axios';
+
+export default class UserRepository {
+
+	constructor() {
+		this.axiosService = axios.create({
+			baseURL: "http://testes.rafaelaranhadev.com/api_teste_selecty.php",
+		});
+	}
+
+    async getUsers(){
+     return this.axiosService.get()
+    }
+
+    async deleteUser(userId){
+    return this.axiosService.delete(`?user_code=${userId}`)
+    }
+
+    async createUser(user){
+    this.axiosService.post({
+    jsonData: {
+        name:user.name,
+        email:user.email,
+        user_name:user.userName,
+        phone:user.phone,
+        password:user.password,
+        xp:user.xpProf,
+        academic: user.academic
+    }
+    })
+    .then(function (response) {
+    console.log(response);
+    })
+    .catch(function (error) {
+    console.log(error);
+});
+     
+    }
+
+
+}
+</script>
